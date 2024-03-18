@@ -1,4 +1,4 @@
-# Deployed with Firebase  
+# Deployed with Netlify 
 To view [MOVIE-APP](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)   
 [https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)
 
@@ -16,4 +16,4 @@ Here I have used React function components to build header and movie titles rows
 
 4)we can stop the video by clicking on any movie card or the "close video" button below the movie trailer.
 
-5)MOVIE-APP, search bar, and title are made to be fixed at the top.
+5)MOVIE-APP, search bar, and title are made to be fixed at the top, and clicking on "MovieApp" or entering an empty query in the search bar will reload the website.
