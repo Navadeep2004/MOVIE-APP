@@ -22,7 +22,9 @@ function Row({ title, fetchUrl }) {
 
   return (
     <div className="row">
-      <h2>{title}</h2>
+      <div className="title_head">
+        <h2 className="title_content">{title}</h2>
+      </div>
       <div className="row__posters">
         {movies.map((movie, index) => (
           <div key={movie.id} className="row__poster">

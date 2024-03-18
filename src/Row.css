@@ -7,10 +7,11 @@
 .row__poster {
     width: calc(20% - 10px); /* Adjust this value to fit five posters per row */
     max-height: 350px; /* Adjust the maximum height of the posters */
+    margin-top: 80px;
     margin-left: 0px;
     margin-right: 0px;
     padding: 20px;
-    transition: transform 450ms;    
+    transition: transform 300ms;   
 }
   
 .row__poster img {
@@ -19,6 +20,10 @@
     object-fit: contain;
 }
   
+.row__poster p{
+    color: white;
+    font-size: 15px;
+}
 .row__poster:hover {
     transform: scale(1.04);
     opacity: 1;
@@ -30,3 +35,17 @@
     text-align: center;
 }
   
+.title_head{
+    left: 0px;
+    margin-top: 45px;
+    position: fixed;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    margin-left: 10px;
+  }
+
+  .title_content{
+    padding-left: 30px;
+  }

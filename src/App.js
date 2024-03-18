@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const response = await axios.get(requests.fetchMovies); // Use axios instance for making requests
+        const response = await axios.get(requests.fetchHorrorMovies); // Use axios instance for making requests
         setMovies(response.data.results);
       } catch (error) {
         console.error("Error fetching movies:", error);
@@ -35,15 +35,24 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Movie App</h1>
+      <div className="header">
+        <h1>
+          <a href="./App.js">Movie App</a>
+        </h1>
+      </div>
       <Search onSearch={handleSearch} />
       {searchQuery ? (
         <Row
+          className="header"
           title="Search Results"
           fetchUrl={`/search/movie?query=${searchQuery}`}
         />
       ) : (
-        <Row title="Movie's List" fetchUrl={requests.fetchMovies} />
+        <Row
+          className="header"
+          title="Movie's List"
+          fetchUrl={requests.fetchMovies}
+        />
       )}
     </div>
   );

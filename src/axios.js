@@ -11,14 +11,14 @@ const instance = axios.create({
 });
 
 // Now you can use this instance to make requests
-instance
-  .get("/search/movie", { params: { query: "Damsel" } })
-  .then((response) => {
-    console.log(response.data);
-  })
-  .catch((error) => {
-    console.error("Error searching for movies:", error);
-  });
+// instance
+//   .get("/search/movie", { params: { query: "Damsel" } })
+//   .then((response) => {
+//     console.log(response.data);
+//   })
+//   .catch((error) => {
+//     console.error("Error searching for movies:", error);
+//   });
 //instance.get(''); //this will get appended to the baseURL
 
 export default instance;
