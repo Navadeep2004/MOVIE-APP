@@ -5,7 +5,7 @@
   }
   
 .row__poster {
-    width: calc(20% - 10px); /* Adjust this value to fit five posters per row */
+    /*width: calc(20% - 10px);  Adjust this value to fit five posters per row */
     max-height: 350px; /* Adjust the maximum height of the posters */
     margin-top: 80px;
     margin-left: 0px;
@@ -17,7 +17,7 @@
 .row__poster img {
     width: 100%; /* Ensure the image fills its container */
     height: 100%; /* Ensure the image fills its container */
-    object-fit: contain;
+    object-fit:fill;
 }
   
 .row__poster p{
@@ -36,7 +36,7 @@
 }
   
 .title_head{
-    left: 0px;
+    left: -5px;
     margin-top: 45px;
     position: fixed;
     background-color: black;
@@ -44,8 +44,58 @@
     width: 100%;
     z-index: 100;
     margin-left: 10px;
+    color: orangered;
   }
 
   .title_content{
     padding-left: 30px;
+}
+
+  .row__poster {
+    position: relative; /* Ensure relative positioning for hover effects */
+    cursor: pointer; /* Change cursor to pointer */
+    overflow: hidden; /* Hide overflow content */
+    border-radius: 10px; /* Add border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    transition: box-shadow 0.3s ease; /* Add transition effect */
+    max-width: 250px;
+    max-height: 350px;
+  }
+  
+  .row__poster:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darken box shadow on hover */
+  }
+  
+  .movie_card {
+    width: 100%; /* Ensure image fills the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50px; /* Add border radius to top corners */
+  }
+  
+  .movie__title {
+    padding: 10px; /* Add padding */
+    margin: 0; /* Remove default margin */
+    background-color: rgba(0, 0, 0, 0.5); /* Add background color with opacity */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size */
+    position: absolute; /* Position title absolutely */
+    bottom: 0; /* Align title to the bottom */
+    left: 25px; /* Align title to the left */
+    width: 78%; /* Ensure full width */
+    border-radius: 0 0 50px 50px; /* Add border radius to bottom corners */
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .close_button{
+    background-color: orange; /* Change background color */
+    color: #fff; /* Change text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 15px;
+  }
+
+  .close_button:hover{
+background-color: tomato;
   }

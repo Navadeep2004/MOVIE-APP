@@ -9,6 +9,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
+  const [scrollToTrailer, setScrollToTrailer] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,6 +42,7 @@ function Row({ title, fetchUrl }) {
         if (videoId) {
           // If trailer URL is found, set it in the state
           setTrailerUrl(videoId);
+          setScrollToTrailer(true);
         } else {
           throw new Error("No trailer found");
         }
@@ -48,6 +50,7 @@ function Row({ title, fetchUrl }) {
         // Handle errors if fetching trailer URL fails
         console.error("Error fetching trailer:", error);
         setTrailerUrl("");
+        setScrollToTrailer(false);
       }
     }
   };
@@ -55,14 +58,23 @@ function Row({ title, fetchUrl }) {
   // Function to close the video when the "Close Video" button is clicked
   const handleCloseVideo = () => {
     setTrailerUrl("");
+    setScrollToTrailer(false);
   };
 
+  const onReady = () => {
+    if (scrollToTrailer) {
+      const rowElement = document.querySelector(".row__video");
+      if (rowElement) {
+        rowElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
   // Options for the YouTube player
   const opts = {
     height: "390",
     width: "100%",
     playerVars: {
-      autoplay: 1,
+      autoplay: 1, //video will be autoplayed
       mute: 1, // Added  mute option to mute the player
     },
   };
@@ -73,24 +85,27 @@ function Row({ title, fetchUrl }) {
         <h2 className="title_content">{title}</h2>
       </div>
       <div className="row__posters">
-        {/* Map through the movie data and render each poster */}
         {movies.map((movie) => (
           <div
             key={movie.id}
             onClick={() => handleClick(movie)}
             className="row__poster"
           >
-            <img src={`${base_url}${movie.poster_path}`} alt={movie.name} />
+            <img
+              className="movie_card"
+              src={`${base_url}${movie.poster_path}`}
+              alt={movie.name}
+            />
             <p className="movie__title">{movie.title}</p>
           </div>
         ))}
       </div>
-      {/* Render the YouTube video component if trailerUrl is set */}
       {trailerUrl && (
         <div className="row__video">
-          <YouTube videoId={trailerUrl} opts={opts} />
-          {/* Button to close the video */}
-          <button onClick={handleCloseVideo}>Close Video</button>
+          <YouTube videoId={trailerUrl} opts={opts} onReady={onReady} />
+          <button className="close_button" onClick={handleCloseVideo}>
+            Close Video
+          </button>
         </div>
       )}
     </div>

@@ -31,6 +31,7 @@ function Search({ onSearch }) {
   return (
     <form onSubmit={handleSearchSubmit} className="search__form">
       <input
+        className="searchbar"
         id="searchInput"
         type="text"
         placeholder="Search for a movie... (Press CTRL + K)"

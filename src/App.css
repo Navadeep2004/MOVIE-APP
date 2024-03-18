@@ -18,7 +18,7 @@ a{
   z-index: 100;
   position: fixed;
   left: 800px;
-  top: 20px;
+  top: 15px;
   background-color:transparent;
 }
 .search__form input[type="text"] {
@@ -42,4 +42,54 @@ a{
 }
 
 
+.searchbar {
+  padding: 5px; /* Add padding to the input */
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  margin-right: 10px; /* Add margin between input and button */
+  background-color: rgb(212, 211, 211);
+  color: black;
+}
+
+.searchbar:focus {
+  outline: white; /* Remove default focus outline */
+  border-color: black; /* Change border color on focus */
+}
+
+
+button[type="submit"] {
+  .searchbar {
+    padding: 10px; /* Add padding to the input */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    margin-right: 10px; /* Add margin between input and button */
+  }
+  
+  .searchbar:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  .searchbar::placeholder {
+    color: white; 
+  }
+
+  button[type="submit"] {
+    padding: 5px 10px; /* Add padding to the button */
+    background-color: #007bff; /* Change background color */
+    color: #fff; /* Change text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+  }
+  
+  background-color: orange; /* Change background color */
+  color: #fff; /* Change text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  font-size: 15px;
+}
+
+button[type="submit"]:hover {
+  background-color: tomato; /* Darken background color on hover */
+}
 
