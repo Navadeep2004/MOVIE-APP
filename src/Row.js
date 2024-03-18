@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "./axios";
+import React, { useState, useEffect } from "react";
+import axios from "./axios"; // Import axios instance from axios.js
 import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
@@ -7,30 +7,28 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl }) {
   const [movies, setMovies] = useState([]);
 
-  //A snippet of code which runs on  a specific condition
   useEffect(() => {
-    async function fetchData() {
-      const request = await axios.get(fetchUrl);
-      setMovies(request.data.results);
-      return request;
-    }
-    fetchData();
-  }, [fetchUrl]); //if [] run once when the row loads and do not run again.
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(fetchUrl); // Use axios instance for making requests
+        setMovies(response.data.results);
+      } catch (error) {
+        console.error("Error fetching movies:", error);
+      }
+    };
 
-  console.table(movies);
+    fetchData();
+  }, [fetchUrl]);
 
   return (
     <div className="row">
       <h2>{title}</h2>
-
       <div className="row__posters">
-        {/*several row_posters */}
-        {movies.map((movie) => (
-          <img
-            className="row__poster"
-            src={`${base_url}${movie.poster_path}`}
-            alt={movie.name}
-          ></img>
+        {movies.map((movie, index) => (
+          <div key={movie.id} className="row__poster">
+            <img src={`${base_url}${movie.poster_path}`} alt={movie.name}></img>
+            <p className="movie__title">{movie.title}</p>
+          </div>
         ))}
       </div>
     </div>

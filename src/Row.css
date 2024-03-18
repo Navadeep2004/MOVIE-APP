@@ -1,18 +1,32 @@
-.row__posters{
+.row__posters {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly with space between */
+  }
+  
+.row__poster {
+    width: calc(20% - 10px); /* Adjust this value to fit five posters per row */
+    max-height: 350px; /* Adjust the maximum height of the posters */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+    transition: transform 450ms;    
 }
-
-
-
-.row__poster{
+  
+.row__poster img {
+    width: 100%; /* Ensure the image fills its container */
+    height: 100%; /* Ensure the image fills its container */
     object-fit: contain;
-    width: 100%;
-    max-height: 100px;
-    margin-right: 10px;
-     transition: transform 450ms; /*to add slight delay */
 }
-
+  
 .row__poster:hover {
-    transform: scale(1.08);
+    transform: scale(1.04);
     opacity: 1;
 }
+  
+.movie__title {
+    margin-top: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+  
