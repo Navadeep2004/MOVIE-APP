@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+# Deployed with Firebase  
+To view [MOVIE-APP]([https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/))   
+[[https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)]([https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/))  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here I have used React function components to build header and movie titles rows. I used TMDB API to get the requests related to movies.
+Website Overview
+1) Below is a picture of the website when we first open it on a browser.
+![WhatsApp Image 2024-03-19 at 1 17 55 AM](https://github.com/Navadeep2004/MOVIE-APP/assets/106884129/d7813db6-16e6-430b-b3ef-4787b13bca88)
+2)You can search for movies on the search bar of the website and a shortcut (CTRL+K) is also implemented.
 
-## Available Scripts
+3) Movie trailers for respective movies are also fetched and we can see them by clicking on the movie card and the website will automatically scroll down to the movie trailer.
 
-In the project directory, you can run:
+4)we can stop the video by clicking on any movie card or the "close video" button below the movie trailer.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5)MOVIE-APP, search bar, and title are made to be fixed at the top.
