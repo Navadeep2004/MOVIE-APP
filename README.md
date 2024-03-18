@@ -1,6 +1,6 @@
 # Deployed with Firebase  
-To view [MOVIE-APP]([https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/))   
-[[https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)]([https://netflix-27717.web.app](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/))  
+To view [MOVIE-APP](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)   
+[https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/](https://65f88dcede087a12290b989f--spiffy-heliotrope-ba10f8.netlify.app/)
 
 Here I have used React function components to build header and movie titles rows. I used TMDB API to get the requests related to movies.
 Website Overview
